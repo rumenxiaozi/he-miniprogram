@@ -1,0 +1,43 @@
+<view class="prod-container">
+  <view class="prod-form">
+    <input placeholder='搜索' class="prod-search"></input>
+  </view>
+  <view class='prod-content'>
+    <scroll-view scroll-y style='height: {{scrollHeight - 36 + "px"}}' class="nav_left">
+      <block wx:for="{{navLeftItems}}" wx:key="id">
+        <view class="nav_left_items {{curNav == item.id ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.id}}">{{item.name}}</view>
+      </block>
+    </scroll-view>
+    <view class="nav_right">
+      <scroll-view scroll-x scroll-with-animation scroll-into-view="{{curCompType}}" class='comp_types'>
+        <block wx:for="{{compTypes}}" wx:key="id">
+          <view class="comp_type_item {{curCompType == item.id ? 'active' : ''}}" bindtap='switchCompType' data-index="{{index}}" id="{{item.id}}" data-compCode="{{item.compCode}}">{{item.compName}}</view>
+        </block>
+      </scroll-view>
+      <scroll-view scroll-y style='height: {{scrollHeight - 74 + "px"}}' wx:if="{{filterProdList.length}}">
+        <block wx:for="{{filterProdList}}">
+          <view class="nav_right_items">
+            <navigator url="../list/index?brand={{item.id}}&typeid={{filterProdList[curIndex].id}}">
+              <view>
+                <block>{{item.prodName}}</block>
+                <block wx:if="{{item.logo}}">
+                  <image src="{{item.logo}}"></image>
+                </block>
+                <block wx:else>
+                  <image src="http://temp.im/50x30"></image>
+                </block>
+              </view>
+              <view wx:if="{{item.desc}}">
+                <text>{{item.desc}}</text>
+              </view>
+              <view wx:else>
+                <text>{{'默认描述， 哈哈哈哈哈'}}</text>
+              </view>
+            </navigator>
+          </view>
+        </block>
+      </scroll-view>
+      <view wx:else>暂无数据</view>
+    </view>
+  </view>
+</view>

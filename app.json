@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/chat/chat",
+    "pages/prod/prod",
+    "pages/match/match",
+    "pages/logs/logs",
+    "pages/user/user"
+  ],
+  "tabBar": {
+    "selectedColor": "#3985FF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "聊天",
+        "iconPath": "images/chat.png",
+        "selectedIconPath": "images/chat-active.png"
+      },
+      {
+        "pagePath": "pages/prod/prod",
+        "text": "产品",
+        "iconPath": "images/prod.png",
+        "selectedIconPath": "images/prod-active.png"
+      },
+      {
+        "pagePath": "pages/match/match",
+        "text": "匹配",
+        "iconPath": "images/match.png",
+        "selectedIconPath": "images/match-active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user-active.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小何的后花园",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f5f5f5"
+  },
+  "sitemapLocation": "sitemap.json"
+}
