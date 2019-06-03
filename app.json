@@ -13,26 +13,26 @@
       {
         "pagePath": "pages/index/index",
         "text": "聊天",
-        "iconPath": "images/chat.png",
-        "selectedIconPath": "images/chat-active.png"
+        "iconPath": "images/tabs/chat.png",
+        "selectedIconPath": "images/tabs/chat-active.png"
       },
       {
         "pagePath": "pages/prod/prod",
         "text": "产品",
-        "iconPath": "images/prod.png",
-        "selectedIconPath": "images/prod-active.png"
+        "iconPath": "images/tabs/prod.png",
+        "selectedIconPath": "images/tabs/prod-active.png"
       },
       {
         "pagePath": "pages/match/match",
         "text": "匹配",
-        "iconPath": "images/match.png",
-        "selectedIconPath": "images/match-active.png"
+        "iconPath": "images/tabs/match.png",
+        "selectedIconPath": "images/tabs/match-active.png"
       },
       {
         "pagePath": "pages/user/user",
         "text": "我的",
-        "iconPath": "images/user.png",
-        "selectedIconPath": "images/user-active.png"
+        "iconPath": "images/tabs/user.png",
+        "selectedIconPath": "images/tabs/user-active.png"
       }
     ]
   },

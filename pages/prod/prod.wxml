@@ -14,24 +14,16 @@
           <view class="comp_type_item {{curCompType == item.id ? 'active' : ''}}" bindtap='switchCompType' data-index="{{index}}" id="{{item.id}}" data-compCode="{{item.compCode}}">{{item.compName}}</view>
         </block>
       </scroll-view>
-      <scroll-view scroll-y style='height: {{scrollHeight - 74 + "px"}}' wx:if="{{filterProdList.length}}">
+      <scroll-view scroll-y style='height: {{scrollHeight - 74 + "px"}}' class="nav_right_content" wx:if="{{filterProdList.length}}">
         <block wx:for="{{filterProdList}}">
           <view class="nav_right_items">
             <navigator url="../list/index?brand={{item.id}}&typeid={{filterProdList[curIndex].id}}">
-              <view>
+              <view class='item-logo'>
+                <image src="{{item.logo || 'http://temp.im/50x30'}}" mode="aspectFit"></image>
+              </view>
+              <view class='item-text'>
                 <block>{{item.prodName}}</block>
-                <block wx:if="{{item.logo}}">
-                  <image src="{{item.logo}}"></image>
-                </block>
-                <block wx:else>
-                  <image src="http://temp.im/50x30"></image>
-                </block>
-              </view>
-              <view wx:if="{{item.desc}}">
-                <text>{{item.desc}}</text>
-              </view>
-              <view wx:else>
-                <text>{{'默认描述， 哈哈哈哈哈'}}</text>
+                <text>{{item.desc || 'test'}}</text>
               </view>
             </navigator>
           </view>
